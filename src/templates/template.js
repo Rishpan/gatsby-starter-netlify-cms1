@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
-import './all.sass'
+import '../components/all.sass'
 
 export default (props) => (
     <div>
