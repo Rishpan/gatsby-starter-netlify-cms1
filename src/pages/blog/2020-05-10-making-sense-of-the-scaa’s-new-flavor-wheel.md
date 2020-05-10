@@ -4,7 +4,7 @@ title: Coffee
 date: 2020-05-10T18:33:01.934Z
 description: The Coffee Taster’s Flavor Wheel, the official resource used by
   coffee tasters, has been revised for the first time this year.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/flavor_wheel.jpg
 tags:
   - flavor
