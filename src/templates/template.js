@@ -19,5 +19,6 @@ export default (props) => (
             <Link to="/about">About</Link>
         </nav>
         {props.children}
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </div>
 );

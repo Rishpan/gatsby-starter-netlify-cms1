@@ -50,6 +50,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       <Footer />
     </div>
   )
