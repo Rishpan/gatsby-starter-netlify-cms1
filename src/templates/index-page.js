@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import Template from './template';
-import Data from './coins-data.json';
+import Template from '../pages/template';
+import Data from '../pages/coins-data.json';
 
 export default () => {
   useEffect(() => {

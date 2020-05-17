@@ -1,9 +1,9 @@
 import React from 'react'
-import Template from '../pages/template'
-import imgurl from '../penny.jpg';
+import Template from '../template'
+// import imgurl from '../penny.jpg';
 
 export default function CoinInfo() {
-  const { coin } = useRouteData()
+  const { coin } = {};
   console.log(coin);
   return (
     <Template>
@@ -29,7 +29,7 @@ export default function CoinInfo() {
           </tr>
         </table>
         <img class="fit-picture"
-              src={imgurl}
+              src={""}
               alt="Penny picture">
         </img>
         </div>
