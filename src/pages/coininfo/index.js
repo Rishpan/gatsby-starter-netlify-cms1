@@ -3,7 +3,8 @@ import Template from '../template'
 // import imgurl from '../penny.jpg';
 
 export default function CoinInfo() {
-  const { coin } = {};
+  // const { coin } = {};
+  const coin = {};
   console.log(coin);
   return (
     <Template>
