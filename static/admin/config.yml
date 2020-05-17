@@ -15,7 +15,7 @@ publish_mode: editorial_workflow
 collections:
   - name: "coin" # Used in routes, e.g., /admin/collections/blog
     label: "Coin detail" # Used in the UI
-    folder: "_posts/coin" # The path to the folder where the documents are stored
+    folder: "src/pages/coininfo" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: preview/{{slug}}
