@@ -1,5 +1,6 @@
 import React from 'react'
 import Template from '../template'
+import { Link, graphql, StaticQuery } from 'gatsby'
 // import imgurl from '../penny.jpg';
 
 export default function CoinInfo() {
@@ -37,3 +38,71 @@ export default function CoinInfo() {
     </Template>
   )
 }
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query CoinInfoQuery  {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                currency
+                date(formatString: "MMMM DD, YYYY")
+                country
+                value
+                history
+                composition
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <BlogRoll data={data} count={count} />}
+  />
+)
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+  query CoinInfoQuery  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            currency
+            date(formatString: "MMMM DD, YYYY")
+            country
+            value
+            history
+            composition
+          }
+        }
+      }
+    }
+  }
+  `)
+  data.allMarkdownRemark.edges.forEach(edge => {
+    const slug = edge.node.fields.slug
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/templates/blog-post.js`),
+      context: { slug: slug },
+    })
+  })
+}
+

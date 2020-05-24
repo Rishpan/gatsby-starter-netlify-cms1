@@ -30,6 +30,7 @@ class BlogRoll extends React.Component {
                     </div>
                   ) : null}
                   <p className="post-meta">
+                    <span>{post.fields.folder}</span>
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
@@ -80,6 +81,7 @@ export default () => (
               id
               fields {
                 slug
+                folder
               }
               frontmatter {
                 title
