@@ -3,7 +3,7 @@ currency: USD
 date: 2020-05-24T17:41:23.063Z
 title: US Half Dollar
 country: United States of America
-value: 25¢
+value: 50¢
 history: It is in limited circulation. In addition, it is the largest US
   circulating coin.
 ---
