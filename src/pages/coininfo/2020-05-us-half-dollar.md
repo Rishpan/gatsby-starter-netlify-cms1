@@ -1,4 +1,5 @@
 ---
+templateKey: coininfo-page
 currency: USD
 date: 2020-05-24T17:41:23.063Z
 title: US Half Dollar

@@ -81,7 +81,6 @@ export default () => (
               id
               fields {
                 slug
-                folder
               }
               frontmatter {
                 title
