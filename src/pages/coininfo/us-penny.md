@@ -11,5 +11,5 @@ history: The United State's first ever one-cent coin. The first one cent coin
   Memorial on the back of the coin was changed to a shield reading 'E Plurbius
   Unum'.
 composition: 97.5% Zn; 2.5% Cu
-featured: true
+featured: false
 ---
