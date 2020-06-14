@@ -7,5 +7,5 @@ country: United States of America
 value: 25¢
 history: Will Complete Later
 composition: (1932-1964) 90% Ag, 10% Cu (1965 - modern) 91.67% Cu, 8.33% Ni
-featured: false
+featured: true
 ---
