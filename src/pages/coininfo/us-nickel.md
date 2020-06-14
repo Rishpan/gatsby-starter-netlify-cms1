@@ -2,9 +2,10 @@
 templateKey: coininfo-page
 currency: USD
 date: 2020-05-24T17:41:23.063Z
-title: US Quarter
+title: US Nickel
 country: United States of America
-value: 25¢
+value: 5¢
 history: Will Complete Later
+composition: 25% Ni, 25% Cu ("War Nickels" 1942 - 1945 56% Cu, 35% Ag, 9% Mn)
+featured: false
 ---
-(1932-1964) 90% Ag, 10% Cu (1965 - modern) 91.67% Cu, 8.33% Ni

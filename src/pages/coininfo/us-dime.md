@@ -6,5 +6,6 @@ title: US Dime
 country: United States of America
 value: 10¢
 history: Will Complete Later
+composition: 91.67% Cu; 8.33% Ni (Before 1965- 90% silver, 10% copper)
+featured: true
 ---
-91.67% Cu; 8.33% Ni (Before 1965- 90% silver, 10% copper)

@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import Template from '../pages/template';
 import Data from '../pages/coins-data.json';
 
-export default () => {
+export default ({ data }) => {
+  const { edges: posts } = data.allMarkdownRemark
+
   useEffect(() => {
     const script = document.createElement('script');
 
@@ -26,22 +28,20 @@ export default () => {
   }, []);
 
 
-  var featuredCoinElements = [];
-  for (var x = 0; x < Data.coins.length; x++) {
+  var featuredCoinElements = posts.map(({ node: post }) => {
     // This is JSX! We need babel to translate this to JavaScript
     // usd/us-penny
-    var featuredCoin = (
+    return (
       <div className="featured-coin rounded-corners">
         <img src="" />
         <p>
-          <a href={`/coins/usd/${Data.coins[x].id}`}> 
-            {Data.coins[x].Title}
+          <a href={`${post.fields.slug}`}> 
+            {post.frontmatter.title}
           </a>
         </p>
       </div>
     );
-    featuredCoinElements.push(featuredCoin);
-  }
+  });
   return (
     <Template>
       <section>
@@ -50,21 +50,31 @@ export default () => {
         {featuredCoinElements}
       </div>
     </section>
-    <section>
-      <h2>Featured Coin News</h2>
-      <div class="coin-news rounded-corners">
-        <h3>News item title</h3>
-        <p>Here's the latest blah blah</p>
-      </div>
-      <div class="coin-news rounded-corners">
-        <h3>News item title</h3>
-        <p>Here's the latest blah blah</p>
-      </div>
-      <div class="coin-news rounded-corners">
-        <h3>News item title</h3>
-        <p>Here's the latest blah blah</p>
-      </div>
-    </section>
     </Template>
   );
 }
+
+export const coinInfoQuery = graphql`
+  query FeaturedCoinByPath {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { 
+        frontmatter: { 
+          featured: { eq: true } 
+          templateKey: {eq: "coininfo-page"}
+        } 
+      }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
