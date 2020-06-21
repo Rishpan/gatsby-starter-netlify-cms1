@@ -1,18 +1,11 @@
 import React from 'react'
 import { Link } from "gatsby"
+import Header from "../components/Header";
 import '../components/all.sass'
 
 export default (props) => (
     <div>
-        <header class="rounded-corners">
-            <div class="header-top">
-                <h1>Coinnit</h1>
-                <button>Add a Coin</button>
-            </div>
-            <div id="search">
-                <input type="text" placeholder="Search for a coin" />
-            </div>
-        </header>
+        <Header />
         <nav class = "rounded-corners">
             <Link to="/">Home</Link>
             <Link to="/news">News</Link>
