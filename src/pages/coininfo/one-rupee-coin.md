@@ -1,7 +1,7 @@
 ---
 currency: INR
 date: 2020-05-24T17:41:23.063Z
-title: Indian one-rupee coin
+title: Indian One-Rupee coin
 country: India
 value: ₹1
 history: Add later...
