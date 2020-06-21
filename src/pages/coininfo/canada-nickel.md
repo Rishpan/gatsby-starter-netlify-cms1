@@ -6,6 +6,6 @@ title: Canada Nickel
 country: Canada
 value: ¢5
 history: complete later
-composition: 94% Steel, 1.5% Ni, 4.5% Cu plating
+composition: Nickel-Plated Steel 94.5% Steel, 3.5% Cu, 2% Ni plating
 featured: false
 ---
