@@ -6,6 +6,6 @@ title: India Five Rupee Coin
 country: India
 value: ₹5
 history: complete later
-composition: Stainless Steel
+composition: Nickel-brass
 featured: false
 ---
