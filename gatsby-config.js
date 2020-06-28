@@ -77,7 +77,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [`title`, 'currency', 'country'],
+        fields: ['title', 'currency', 'country','path'],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
@@ -85,6 +85,7 @@ module.exports = {
             title: node => node.frontmatter.title,
             currency: node => node.frontmatter.currency,
             country: node => node.frontmatter.country,
+            path: node => node.fileAbsolutePath
           },
         },
       },

@@ -34,8 +34,7 @@ export default function CoinInfo({ data }) {
           </tr>
         </table>
         <img class="fit-picture"
-              src={""}
-              alt="Penny picture">
+              src={c.image.image}>
         </img>
         </div>
     </Template>
@@ -54,6 +53,9 @@ export const coinInfoQuery = graphql`
         value
         history
         composition
+        image{
+          image
+        }
       }
     }
   }
