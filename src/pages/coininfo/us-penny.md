@@ -12,4 +12,5 @@ history: The United State's first ever one-cent coin. The first one cent coin
   Unum'.
 composition: 97.5% Zn; 2.5% Cu
 featured: false
+image: /img/penny.jpg
 ---
