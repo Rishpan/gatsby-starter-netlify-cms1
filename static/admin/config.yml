@@ -30,5 +30,6 @@ collections:
       - {label: "History", name: "history", widget: "string"}
       - {label: "Composition", name: "composition", widget: "string"}
       - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "Image", name: "image", widget: "image"}
 
       
