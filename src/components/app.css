@@ -24,10 +24,9 @@ nav {
 
 nav a {
   color: white;
-  padding: 1rem;
+  padding: .5rem 1rem;
   display: inline-block;
 }
-
 .content {
   padding: 1rem;
 }
@@ -47,8 +46,13 @@ body {
 
 header {
   background-color: #0079d3;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
 }
+
+header, nav {
+  padding: 0px 30px;
+}
+
 
 .header-top {
   display: flex;
@@ -99,3 +103,42 @@ table {
   color: black;
 }
 
+
+.header-top {
+  display: flex;
+}
+
+.header-item {
+  flex: 2;
+}
+
+.header-add {
+  text-align: right;
+}
+
+#search {
+  flex: 5;
+}
+
+#search input {
+  padding: 7px;
+  font-size: 20px;
+}
+
+#search ul {
+  position: absolute;
+  background-color: white;
+  top: 28px;
+  width: 100%;
+  list-style-type: none;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#search > div {
+  position: relative;
+}
+
+.main-content {
+  padding: 0px 10%;
+}

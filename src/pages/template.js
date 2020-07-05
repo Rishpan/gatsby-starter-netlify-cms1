@@ -6,9 +6,8 @@ import '../components/all.sass'
 export default (props) => (
     <div>
         <Header />
-        <nav class = "rounded-corners">
+        <nav>
             <Link to="/">Home</Link>
-            <Link to="/news">News</Link>
             <Link to="/about">About</Link>
         </nav>
         {props.children}

@@ -31,9 +31,9 @@ export default ({ data }) => {
   var featuredCoinElements = posts.map(({ node: post }) => {
     // This is JSX! We need babel to translate this to JavaScript
     // usd/us-penny
+    const backgroundImage = post.frontmatter.image && post.frontmatter.image.publicURL ? post.frontmatter.image.publicURL : undefined;
     return (
-      <div className="featured-coin rounded-corners">
-        <img src="" />
+      <div className="featured-coin rounded-corners" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <p>
           <a href={`${post.fields.slug}`}> 
             {post.frontmatter.title}
@@ -44,7 +44,7 @@ export default ({ data }) => {
   });
   return (
     <Template>
-      <section>
+      <section class="main-content">
       <h2>Featured</h2>
       <div class="featured-coins">
         {featuredCoinElements}
@@ -72,6 +72,9 @@ export const coinInfoQuery = graphql`
           }
           frontmatter {
             title
+            image {
+              publicURL
+            }
           }
         }
       }

@@ -15,13 +15,13 @@ export default class Search extends Component {
         return (
             <div>
                 <input type="text" placeholder="Search for a coin" value={this.state.query} onChange={this.search} />
-                <ul>
+                {this.state.results.length > 0 && <ul>
                     {this.state.results.map(page => (
                         <li key={page.id}>
                             <Link to={page.path}>{page.title}</Link>
                         </li>
                     ))}
-                </ul>
+                </ul>}
             </div>
         )
     } 

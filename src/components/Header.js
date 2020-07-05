@@ -13,13 +13,15 @@ export default function Header() {
       }
     `}
     render={data => (
-        <header class="rounded-corners">
+        <header>
             <div class="header-top">
-                <h1>Coinnit</h1>
-                <button><a href="/admin">Add a Coin</a></button>
-            </div>
-            <div id="search">
-                <Search searchIndex={data.siteSearchIndex.index} />
+                <h1 class="header-item">Coinnit</h1>
+                <div id="search">
+                  <Search searchIndex={data.siteSearchIndex.index} />
+                </div>
+                <div class="header-item header-add">
+                  <button><a href="/admin">Add a Coin</a></button>
+                </div>
             </div>
         </header>
     )}
