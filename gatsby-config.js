@@ -85,7 +85,7 @@ module.exports = {
             title: node => node.frontmatter.title,
             currency: node => node.frontmatter.currency,
             country: node => node.frontmatter.country,
-            path: node => node.fileAbsolutePath
+            path: node => node.fields.slug
           },
         },
       },
