@@ -7,5 +7,5 @@ country: Canada
 value: 1¢
 history: complete later
 composition: 94% Steel, 1.5% Ni, 4.5% Cu plating
-featured: true
+featured: false
 ---
