@@ -30,6 +30,6 @@ collections:
       - {label: "History", name: "history", widget: "string"}
       - {label: "Composition", name: "composition", widget: "string"}
       - {label: "Featured", name: "featured", widget: "boolean"}
-      - {label: "Image", name: "image", required: false, widget: "image", fields: [{ label: "Image", name: "image", widget: "image" }]}
+      - {label: "Image", name: "image", required: false, widget: "image"}
 
       

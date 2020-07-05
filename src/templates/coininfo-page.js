@@ -7,7 +7,6 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 //  const { markdownRemark: post } = data
 
 export default function CoinInfo({ data }) {
-  // console.log("#####", something);
   const { markdownRemark: coin } = data;
   const c = coin.frontmatter;
   return (
@@ -16,6 +15,7 @@ export default function CoinInfo({ data }) {
         <h1>{c.title}</h1>
         <div class="information"></div>
         <table>
+          <tbody>
           <tr>
             <td>Value</td>
             <td>{c.value}</td>
@@ -32,10 +32,12 @@ export default function CoinInfo({ data }) {
             <td>Composition</td>
             <td>{c.composition}</td>
           </tr>
+          </tbody>
         </table>
+        {c.image && c.image.publicURL && 
         <img class="fit-picture"
-              src={c.image.image}>
-        </img>
+              src={c.image.publicURL}>
+        </img>}
         </div>
     </Template>
   )
@@ -53,8 +55,8 @@ export const coinInfoQuery = graphql`
         value
         history
         composition
-        image{
-          image
+        image {
+          publicURL
         }
       }
     }
