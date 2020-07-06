@@ -8,4 +8,5 @@ value: 5¢
 history: Will Complete Later
 composition: 25% Ni, 25% Cu ("War Nickels" 1942 - 1945 56% Cu, 35% Ag, 9% Mn)
 featured: true
+image: /img/nickel.jpg
 ---
