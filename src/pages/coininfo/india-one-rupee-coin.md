@@ -8,4 +8,5 @@ value: ₹1
 history: complete later
 composition: Stainless Steel
 featured: true
+image: /img/one-rupee.png
 ---
