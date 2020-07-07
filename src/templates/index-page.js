@@ -48,7 +48,7 @@ export default ({ data }) => {
       <h1><strong>Welcome to Coinnit!</strong></h1>
       <body ><div class="line1"></div></body >
       <br />
-      <li>What is Coinnit?: An accessible coin database for amateur coin collectors.</li>
+      <li>What is Coinnit?: An accessible coin database for amateur coin collectors. Each coin has a detailed page.</li>
       <li>Who created Coinnit?: This website was created by Rishab Pangal (an ardent coin collector) under the guidance of a mentor from the Coder School.</li>
       <li>What if I have coins to add?: Coinnit offers a unique add-a-coin feature, where our users can add coins from their collection to our database!</li>
       <li>What types of coins are in the database?: We have coins from all around the world! (mostly coins in circulation)</li>
@@ -59,6 +59,11 @@ export default ({ data }) => {
         {featuredCoinElements}
       </div>
       <br />
+      <h1><strong>Weekly Coin Fun Fact</strong></h1>
+      <body ><div class="line1"></div></body >
+      <br />
+      <p>The USD was based on a Spanish Coin.</p>
+      <br />
       <h1><strong>Other Websites for Coin Enthusiasts</strong></h1>
       <body ><div class="line1"></div></body >
       <br />
@@ -67,6 +72,7 @@ export default ({ data }) => {
       <p><a href="https://www.usmint.gov">The US Mint</a></p>
       <p><a href="https://www.coinnews.net">CoinNews.net</a></p>
       <p><a href="https://coins.ha.com">Heritage Auctions</a></p>
+
       </section>
       <footer><center>Designed using React and Gatsby</center></footer>
       <footer><center>Created by Rishab Pangal under the guidance of Ryan Cheung</center></footer>
