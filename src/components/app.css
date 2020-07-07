@@ -128,6 +128,7 @@ table {
 #search ul {
   position: absolute;
   background-color: white;
+  color: black;
   top: 28px;
   width: 100%;
   list-style-type: none;

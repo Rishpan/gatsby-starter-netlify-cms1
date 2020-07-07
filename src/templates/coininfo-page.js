@@ -25,8 +25,12 @@ export default function CoinInfo({ data }) {
             <td>{c.country}</td>
           </tr>
           <tr>
-            <td>History</td>
-            <td>{c.history}</td>
+            <td>Circulation Status</td>
+            <td>{c.circulation}</td>
+          </tr>
+          <tr>
+            <td>Value in USD</td>
+            <td>{c.usdvalue}</td>
           </tr>
           <tr>
             <td>Composition</td>
@@ -53,7 +57,8 @@ export const coinInfoQuery = graphql`
         title
         country
         value
-        history
+        circulation
+        usdvalue
         composition
         image {
           publicURL
