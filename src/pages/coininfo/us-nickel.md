@@ -2,7 +2,7 @@
 templateKey: coininfo-page
 currency: USD
 date: 2020-05-24T17:41:23.063Z
-title: US Nickel
+title: U.S. Nickel
 country: United States of America
 value: 5¢
 history: Will Complete Later
