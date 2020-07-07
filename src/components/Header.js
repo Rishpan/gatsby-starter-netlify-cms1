@@ -1,6 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Search from './Search';
+
 
 export default function Header() {
     return (
@@ -15,7 +17,7 @@ export default function Header() {
     render={data => (
         <header>
             <div class="header-top">
-                <h1 class="header-item">Coinnit</h1>
+                <h1 class="header-item"><nav><Link to="/">Coinnit</Link></nav></h1>
                 <div id="search">
                   <Search searchIndex={data.siteSearchIndex.index} />
                 </div>

@@ -1,15 +1,15 @@
 body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+    Helvetica, Arial, 'Lucida Grande', sans-serif, 'Optima';
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: #108db8;
+  color: #ffa600;
   font-weight: bold;
 }
 
@@ -19,11 +19,12 @@ img {
 
 nav {
   width: 100%;
-  background: #0079d3;
+  background: #ffa600;
 }
 
 nav a {
   color: white;
+  font-weight: bold;
   padding: .5rem 1rem;
   display: inline-block;
 }
@@ -33,24 +34,20 @@ nav a {
 
 /* My styles */
 body {
-  font-family: sans-serif;
+  font-family: Optima;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.rounded-corners {
-  border-radius: 10px;
-}
-
 header {
-  background-color: #0079d3;
+  background-color: #ffa600;
   padding: 10px 10px 0px 10px;
 }
 
 header, nav {
-  padding: 0px 30px;
+  padding: 0px 1px;
 }
 
 
@@ -62,7 +59,11 @@ header, nav {
 }
 
 button {
-  height: 40px;
+  height: 30px;
+  background-color: white;
+  font-family: Optima;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 #search input {
@@ -70,6 +71,7 @@ button {
 }
 
 .featured-coins {
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -84,16 +86,10 @@ button {
   color: black;
 }
 
-.coin-news {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 20px;
-  
-}
 
 table,
 td {
-  border: 1px solid blue;
+  border: 1px solid black;
 }
 
 table {
@@ -118,11 +114,12 @@ table {
 
 #search {
   flex: 5;
+  font: Optima;
 }
 
 #search input {
-  padding: 7px;
-  font-size: 20px;
+  padding: 6px;
+  font-size: 15px;
 }
 
 #search ul {
@@ -130,10 +127,22 @@ table {
   background-color: white;
   color: black;
   top: 28px;
+  font: Optima;
   width: 100%;
   list-style-type: none;
   padding: 10px;
   border: 1px solid black;
+}
+
+.line{
+  width: 1152px;
+  height: 0px;
+  border-bottom: 4px solid lightgrey;
+  position: absolute;
+}
+
+button:hover { 
+  background-color: lightgrey;
 }
 
 #search > div {

@@ -45,7 +45,8 @@ export default ({ data }) => {
   return (
     <Template>
       <section class="main-content">
-      <h2>Featured</h2>
+      <h2>Featured Coins of the Day</h2>
+      <body ><div class="line"></div></body >
       <div class="featured-coins">
         {featuredCoinElements}
       </div>
