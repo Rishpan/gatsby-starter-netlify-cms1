@@ -2,7 +2,7 @@
 templateKey: coininfo-page
 currency: USD
 date: 2020-05-17T18:34:08.219Z
-title: US Penny
+title: U.S. Penny
 country: United States of America
 value: 1 cent
 history: The United State's first ever one-cent coin. The first one cent coin
