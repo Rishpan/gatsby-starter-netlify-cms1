@@ -27,8 +27,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Country", name: "country", widget: "string"}
       - {label: "Value", name: "value", widget: "string"}
-      - {label: "Circulation Status", name: "circulation", widget: "string"}
-      - {label: "Value in USD", name: "usdvalue", widget: "string"}
+      - {label: "History", name: "history", widget: "string"}
       - {label: "Composition", name: "composition", widget: "string"}
       - {label: "Featured", name: "featured", widget: "boolean"}
       - {label: "Image", name: "image", required: false, widget: "image"}
