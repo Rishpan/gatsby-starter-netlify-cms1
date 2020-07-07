@@ -2,7 +2,7 @@
 templateKey: coininfo-page
 currency: GBP
 date: 2020-07-07T00:10:01.536Z
-title: 2 Pound Coin
+title: British Two Pound Coin
 country: United Kingdom
 value: £2
 history: delete this section
