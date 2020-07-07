@@ -17,19 +17,19 @@ export default function CoinInfo({ data }) {
         <table>
           <tbody>
           <tr>
-            <td>Value</td>
+            <td><b>Value</b></td>
             <td>{c.value}</td>
           </tr>
           <tr>
-            <td>Country</td>
+            <td><b>Country</b></td>
             <td>{c.country}</td>
           </tr>
           <tr>
-            <td>History</td>
+            <td><b>History</b></td>
             <td>{c.history}</td>
           </tr>
           <tr>
-            <td>Composition</td>
+            <td><b>Composition</b></td>
             <td>{c.composition}</td>
           </tr>
           </tbody>

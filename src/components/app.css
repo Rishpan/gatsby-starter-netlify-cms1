@@ -58,8 +58,14 @@ header, nav {
   color: white;
 }
 
+footer {
+  padding: 10px 20px;
+  background: grey;
+  color: white;
+}
+
 button {
-  height: 30px;
+  height: 35px;
   background-color: white;
   font-family: Optima;
   color: black;
@@ -142,9 +148,17 @@ table {
   position: absolute;
 }
 
+.line1{
+  width: 1152px;
+  height: 0px;
+  border-bottom: 4px solid lightgrey;
+  position: absolute;
+}
+
 button:hover { 
   background-color: lightgrey;
 }
+
 
 #search > div {
   position: relative;
@@ -154,6 +168,16 @@ button:hover {
   max-width: 5%;
   position: relative;
   right: 150px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
 
 .main-content {
