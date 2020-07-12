@@ -17,7 +17,7 @@ export default function Header() {
     render={data => (
         <header>
             <div class="header-top">
-              <div class = "header-item">
+              <div class = "header-item left-header-item">
                 <h1><nav><Link to="/">Coinnit</Link></nav></h1>
                 <img src="/img/coinnitlogo.png" class="logo" alt="coinnit logo"/>
               </div>
