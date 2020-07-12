@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Template from '../pages/template';
-import Data from '../pages/coins-data.json';
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
