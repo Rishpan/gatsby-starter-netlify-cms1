@@ -46,7 +46,7 @@ export default ({ data }) => {
     <Template>
       <section class="main-content">
       <h1><strong>Welcome to Coinnit!</strong></h1>
-      <body ><div class="line1"></div></body >
+      <div class="line1"></div>
       <br />
       <li>What is Coinnit?: An accessible coin database for amateur coin collectors. Each coin has a detailed page.</li>
       <li>Who created Coinnit?: This website was created by Rishab Pangal (an ardent coin collector) under the guidance of a mentor from the Coder School.</li>
@@ -54,18 +54,18 @@ export default ({ data }) => {
       <li>What types of coins are in the database?: We have coins from all around the world! (mostly coins in circulation)</li>
       <li>Is the database complete?: No! There are still thousands of coins to be added to the database over time. You can help by adding your own coins!</li>
       <h2>Featured Coins of the Day</h2>
-      <body ><div class="line"></div></body >
+      <div class="line"></div>
       <div class="featured-coins">
         {featuredCoinElements}
       </div>
       <br />
       <h1><strong>Weekly Coin Fun Fact</strong></h1>
-      <body ><div class="line1"></div></body >
+      <div class="line1"></div>
       <br />
       <p>The USD was based on a Spanish Coin.</p>
       <br />
       <h1><strong>Other Websites for Coin Enthusiasts</strong></h1>
-      <body ><div class="line1"></div></body >
+      <div class="line1"></div>
       <br />
       <a href="https://www.pcgs.com/coinfacts">PCGS Coin Facts</a>
       <p><a href="https://www.thesprucecrafts.com/collecting-coins-4162970">The Spruce</a></p>
