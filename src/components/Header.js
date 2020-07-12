@@ -17,8 +17,10 @@ export default function Header() {
     render={data => (
         <header>
             <div class="header-top">
-                <h1 class="header-item"><nav><Link to="/">Coinnit</Link></nav></h1>
+              <div class = "header-item">
+                <h1><nav><Link to="/">Coinnit</Link></nav></h1>
                 <img src="/img/coinnitlogo.png" class="logo" alt="coinnit logo"/>
+              </div>
                 <div id="search">
                   <Search searchIndex={data.siteSearchIndex.index} />
                 </div>
