@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import Template from '../pages/template';
+import Carousel from 'react-bootstrap/Carousel';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -32,13 +35,17 @@ export default ({ data }) => {
     // usd/us-penny
     const backgroundImage = post.frontmatter.image && post.frontmatter.image.publicURL ? post.frontmatter.image.publicURL : undefined;
     return (
-      <div className="featured-coin rounded-corners" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <p>
-          <a href={`${post.fields.slug}`}> 
-            {post.frontmatter.title}
-          </a>
-        </p>
-      </div>
+      <Carousel.Item style={{ textAlign: "center", minHeight: 500 }}>
+        <img
+          src = { backgroundImage }
+          alt="Slide"
+          style={{ width: "75%" }}
+        />
+        <div class="line1" style = {{ borderBottom: "4px solid black" }}></div>
+        <Carousel.Caption style={{ position: 'initial' }}>
+          <h3><a href={`${post.fields.slug}`} style = { { fontSize: "40px"}}>{post.frontmatter.title}</a></h3>
+        </Carousel.Caption>
+      </Carousel.Item>
     );
   });
   return (
@@ -54,9 +61,10 @@ export default ({ data }) => {
       <li>Is the database complete?: No! There are still thousands of coins to be added to the database over time. You can help by adding your own coins!</li>
       <h2>Featured Coins of the Day</h2>
       <div class="line"></div>
-      <div class="featured-coins">
+      <br />
+      <Carousel style={{ border: "3px solid black",background: "grey"}}>
         {featuredCoinElements}
-      </div>
+      </Carousel>
       <br />
       <h1><strong>Weekly Coin Fun Fact</strong></h1>
       <div class="line1"></div>
