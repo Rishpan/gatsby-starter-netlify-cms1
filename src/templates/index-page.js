@@ -6,6 +6,11 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
+  const coininfoPages = posts
+    .filter(({ node: post }) => post.frontmatter.templateKey == "coininfo-page")
+    .filter(({ node: post }) => post.frontmatter.featured );
+  const funFacts = posts.filter(({ node: post }) => post.frontmatter.templateKey == "funfacts");
+  const randomFunFact = funFacts[Math.floor(Math.random() * Math.floor(funFacts.length))];
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -30,7 +35,7 @@ export default ({ data }) => {
   }, []);
 
 
-  var featuredCoinElements = posts.map(({ node: post }) => {
+  var featuredCoinElements = coininfoPages.map(({ node: post }) => {
     // This is JSX! We need babel to translate this to JavaScript
     // usd/us-penny
     const backgroundImage = post.frontmatter.image && post.frontmatter.image.publicURL ? post.frontmatter.image.publicURL : undefined;
@@ -69,7 +74,7 @@ export default ({ data }) => {
       <h1><strong>Weekly Coin Fun Fact</strong></h1>
       <div class="line1"></div>
       <br />
-      <p>The USD was based on a Spanish Coin.</p>
+      <p>{randomFunFact.node.frontmatter.fact}</p>
       <br />
       <h1><strong>Other Websites for Coin Enthusiasts</strong></h1>
       <div class="line1"></div>
@@ -88,14 +93,13 @@ export default ({ data }) => {
   );
 }
 
-export const coinInfoQuery = graphql`
+export const indexQuery = graphql`
   query FeaturedCoinByPath {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { 
         frontmatter: { 
-          featured: { eq: true } 
-          templateKey: {eq: "coininfo-page"}
+          templateKey: {in: ["coininfo-page", "funfacts"]}
         } 
       }
     ) {
@@ -105,6 +109,9 @@ export const coinInfoQuery = graphql`
             slug
           }
           frontmatter {
+            templateKey
+            fact
+            featured
             title
             image {
               publicURL
