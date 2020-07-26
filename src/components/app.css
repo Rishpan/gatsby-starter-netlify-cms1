@@ -394,3 +394,7 @@ button:hover {
   color: #fff;
   text-align: center;
 }
+
+.carousel-item img{
+  border: 3px solid black;
+}
